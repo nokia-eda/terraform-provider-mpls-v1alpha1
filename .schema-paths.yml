@@ -1,0 +1,204 @@
+app_group:
+  - read:
+      path: /apps/mpls.eda.nokia.com
+      method: GET
+
+intent_targets:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}/_targets
+      method: GET
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}/_targets
+      method: GET
+
+k8_s_topology_request:
+  - create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}/_topology
+      method: POST
+  - create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}/_topology
+      method: POST
+  - create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}/_topology
+      method: POST
+
+resource_history:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}/_revs
+      method: GET
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}/_revs
+      method: GET
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}/_revs
+      method: GET
+
+resource_list:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1
+      method: GET
+
+status:
+  - delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: DELETE
+  - delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: DELETE
+  - delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: DELETE
+
+ui_result:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/_ui/{pathname}
+      method: GET
+
+com.nokia.eda.mpls.v1alpha1.default_ldp_interface:
+  - create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces
+      method: POST
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: GET
+  - update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: PUT
+  - update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: PATCH
+
+com.nokia.eda.mpls.v1alpha1.default_ldp_interface_list:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/defaultldpinterfaces
+      method: GET
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces
+      method: GET
+  - delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces
+      method: DELETE
+
+com.nokia.eda.mpls.v1alpha1.default_ldp_interface_deleted_resources:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/_deleted
+      method: GET
+
+com.nokia.eda.mpls.v1alpha1.default_ldp_router:
+  - create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters
+      method: POST
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: GET
+  - update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: PUT
+  - update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: PATCH
+
+com.nokia.eda.mpls.v1alpha1.default_ldp_router_list:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/defaultldprouters
+      method: GET
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters
+      method: GET
+  - delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters
+      method: DELETE
+
+com.nokia.eda.mpls.v1alpha1.default_ldp_router_deleted_resources:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/_deleted
+      method: GET
+
+com.nokia.eda.mpls.v1alpha1.label_block:
+  - create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks
+      method: POST
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: GET
+  - update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: PUT
+  - update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: PATCH
+
+com.nokia.eda.mpls.v1alpha1.label_block_list:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/labelblocks
+      method: GET
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks
+      method: GET
+  - delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks
+      method: DELETE
+
+com.nokia.eda.mpls.v1alpha1.label_block_deleted_resources:
+  - read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/_deleted
+      method: GET
+
+totalPaths: 24
+totalSchemas: 66
+usedSchemas: 16
+unusedSchemas: 50
+unusedSchemaList:
+  - AppGroupVersion
+  - ErrorResponse
+  - IntentTarget
+  - K8SPatchOp
+  - OverlayState
+  - Patch
+  - Resource
+  - ResourceHistoryEntry
+  - ResourceTopology
+  - StatusDetails
+  - TopoAttrMetadata
+  - TopoAttribute
+  - TopoBoolExpression
+  - TopoBoolLiteral
+  - TopoElemMetadata
+  - TopoEndpointBoolExpression
+  - TopoField
+  - TopoFixedBoolExpression
+  - TopoLabelSelector
+  - TopoLiteralStatusOrBadge
+  - TopoLiteralValue
+  - TopoLogicalExpression
+  - TopoNodeGrouping
+  - TopoOverlayEndpoint
+  - TopoOverlayEndpointState
+  - TopoOverlayLink
+  - TopoOverlayLinkGroup
+  - TopoOverlayLinkGroupEndpoint
+  - TopoOverlayLinkState
+  - TopoOverlayNode
+  - TopoOverlayNodeOrGroup
+  - TopoOverlayNodeState
+  - TopoOverlayValue
+  - TopoSchema
+  - TopoStateFilter
+  - TopoValue
+  - TopoValueExpression
+  - Topology
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPInterface_DeletedResourceEntry
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPInterface_alarms
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPInterface_deviations
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPInterface_metadata
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPRouter_DeletedResourceEntry
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPRouter_alarms
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPRouter_deviations
+  - com.nokia.eda.mpls.v1alpha1.DefaultLDPRouter_metadata
+  - com.nokia.eda.mpls.v1alpha1.LabelBlock_DeletedResourceEntry
+  - com.nokia.eda.mpls.v1alpha1.LabelBlock_alarms
+  - com.nokia.eda.mpls.v1alpha1.LabelBlock_deviations
+  - com.nokia.eda.mpls.v1alpha1.LabelBlock_metadata

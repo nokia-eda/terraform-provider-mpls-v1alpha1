@@ -1,0 +1,86 @@
+provider:
+  name: mpls
+
+data_sources:
+  app_group:
+    read:
+      path: /apps/mpls.eda.nokia.com
+      method: GET
+
+  default_ldp_interface:
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: GET
+
+  default_ldp_interface_list:
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces
+      method: GET
+
+  default_ldp_router:
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: GET
+
+  default_ldp_router_list:
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters
+      method: GET
+
+  label_block:
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: GET
+
+  label_block_list:
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks
+      method: GET
+
+  resource_list:
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1
+      method: GET
+
+resources:
+  default_ldp_interface:
+    create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces
+      method: POST
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: GET
+    update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: PUT
+    delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+      method: DELETE
+
+  default_ldp_router:
+    create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters
+      method: POST
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: GET
+    update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: PUT
+    delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+      method: DELETE
+
+  label_block:
+    create:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks
+      method: POST
+    read:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: GET
+    update:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: PUT
+    delete:
+      path: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+      method: DELETE
