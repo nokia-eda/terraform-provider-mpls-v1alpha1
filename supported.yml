@@ -1,0 +1,52 @@
+datasources:
+  - model_name: app_group
+    oas_endpoint: /apps/mpls.eda.nokia.com
+    oas_schema: AppGroup
+  - model_name: resource_list
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1
+    oas_schema: ResourceList
+  - model_name: default_ldp_interface_list
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces
+    oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPInterfaceList
+  - model_name: default_ldp_interface
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}
+    oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPInterface
+  - model_name: default_ldp_router_list
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters
+    oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPRouterList
+  - model_name: default_ldp_router
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/{name}
+    oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPRouter
+  - model_name: label_block_list
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks
+    oas_schema: com.nokia.eda.mpls.v1alpha1.LabelBlockList
+  - model_name: label_block
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/{name}
+    oas_schema: com.nokia.eda.mpls.v1alpha1.LabelBlock
+
+resources:
+  - model_name: default_ldp_interface
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces
+    oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPInterface
+  - model_name: default_ldp_router
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters
+    oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPRouter
+  - model_name: label_block
+    oas_endpoint: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks
+    oas_schema: com.nokia.eda.mpls.v1alpha1.LabelBlock
+
+qualified:
+  datasources:
+    - oas_schema: IntentTargets
+      get: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}/_targets
+    - oas_schema: ResourceHistory
+      get: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/{name}/_revs
+    - oas_schema: UIResult
+      get: /apps/mpls.eda.nokia.com/v1alpha1/_ui/{pathname}
+    - oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPInterface_DeletedResources
+      get: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldpinterfaces/_deleted
+    - oas_schema: com.nokia.eda.mpls.v1alpha1.DefaultLDPRouter_DeletedResources
+      get: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/defaultldprouters/_deleted
+    - oas_schema: com.nokia.eda.mpls.v1alpha1.LabelBlock_DeletedResources
+      get: /apps/mpls.eda.nokia.com/v1alpha1/namespaces/{namespace}/labelblocks/_deleted
+  resources:
